@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/mycantina.iml" filepath="$PROJECT_DIR$/mycantina.iml" />
+      <module fileurl="file://$PROJECT_DIR$/backend/mycantina-backend.iml" filepath="$PROJECT_DIR$/backend/mycantina-backend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/frontend/mycantina-frontend.iml" filepath="$PROJECT_DIR$/frontend/mycantina-frontend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/report/mycantina-report.iml" filepath="$PROJECT_DIR$/report/mycantina-report.iml" />
+    </modules>
+  </component>
+</project>

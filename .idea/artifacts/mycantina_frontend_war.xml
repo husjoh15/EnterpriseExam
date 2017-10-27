@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="mycantina-frontend:war">
+    <output-path>$PROJECT_DIR$/frontend/target</output-path>
+    <root id="archive" name="mycantina-frontend-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="mycantina-frontend:war exploded" />
+    </root>
+  </artifact>
+</component>

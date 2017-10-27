@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:fn="http://xmlns.jcp.org/jsp/jstl/functions"
+>
+
+<ui:composition template="layout.xhtml">
+    <ui:define name="title">MyCantina Home Page</ui:define>
+
+    <ui:define name="content">
+
+        <h:link value="Link to Dishes" outcome="/dishes.jsf" id="dishLink"/>
+        <br/>
+        <h:link value="Link to Menu" outcome="/menu.jsf" id="menuLink"/>
+        <hr/>
+        <c:choose>
+            <c:when test="#{menuController.menu == null}">
+                <h:outputText value="No Menu available"/>
+            </c:when>
+
+            <c:otherwise>
+                <c:when test="#{menuController.menu != null}">
+
+                </c:when>
+                <h:link value="Show default" outcome="/home.jsf" id="defaultLink" onclick="#{menuController.menu.date}"/>
+                <br/>
+                <c:when test="#{menuController.nextMenu != null}">
+                    <h:link value="Show next (#{menuController.nextMenu.date})" outcome="/home.jsf" id="nextLink" onclick=""/>
+                </c:when>
+                <br/>
+                <br/>
+                <c:when test="#{menuController.previousMenu != null}">
+                    <h:link value="Show previous (#{menuController.previousMenu.date})" outcome="/home.jsf" id="previousLink" onclick="#{menuController.previousMenu.date}"/>
+                </c:when>
+                <br/>
+                <h:outputText style="font-weight: bold" value="Menu for #{menuController.menu.date}"/>
+                <br/>
+                <h:dataTable value="#{menuController.dishes}" var="dish" border="1" id="menuTable">
+                <h:column>
+                    <f:facet name="header">Name</f:facet>
+                    <h:outputText value="#{dish.name}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Description</f:facet>
+                    <h:outputText value="#{dish.description}"/>
+                </h:column>
+                </h:dataTable>
+            </c:otherwise>
+        </c:choose>
+
+    </ui:define>
+
+</ui:composition>
+</html>

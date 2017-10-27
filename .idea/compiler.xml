@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="mycantina-backend" />
+        <module name="mycantina-frontend" />
+        <module name="mycantina-report" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="mycantina" target="1.5" />
+      <module name="mycantina-backend" target="1.8" />
+      <module name="mycantina-frontend" target="1.8" />
+      <module name="mycantina-report" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
